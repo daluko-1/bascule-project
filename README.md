@@ -34,7 +34,6 @@ This project provides routes and templates for uploading claim files, reviewing 
 ## 🛠️ Tech Stack
 - **Backend**: Flask  
 - **Frontend**: HTML, CSS, Bootstrap  
-- **Templating**: Jinja2  
 - **Future Integrations**: Data analysis engine, cloud storage  
 
 ---
