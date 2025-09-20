@@ -26,8 +26,11 @@ This project provides routes and templates for uploading claim files, reviewing 
 ### Agent Feedback
 ![Agent Feedback](screenshots/agent-feedback.png)
 
-### Manual Review
-![Manual Review](screenshots/manual-review.png)
+### Claim Analysis Result
+![Claim Analysis](screenshots/claim-analysis.png)
+
+### Analytics Dashboard
+![Analytics Dashboard](screenshots/analytics.png)
 
 ---
 
