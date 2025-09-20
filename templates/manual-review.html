@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Manual Review – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Upload / Manual Review</div>
+    <h1>Manual Review</h1>
+    <section class="card">
+      <textarea style="width:100%; min-height:400px">
+{
+  "invoice_id": "INV-20250429-001",
+  "date_processed": "2025-04-29",
+  "vet_details": {
+    "vet_id": "VET-102",
+    "name": "Dr. Emily Carter",
+    "clinic": "Greenfield Equine Clinic",
+    "license_number": "EQ12345"
+  },
+  "customer": {
+    "customer_id": "CUST-876",
+    "name": "Amanda Joseph",
+    "policy_id": "POL-332",
+    "agent": { "agent_id": "AGT-301", "name": "James White" }
+  }
+}
+      </textarea>
+      <div class="btnrow">
+        <button class="btn primary">Update</button>
+        <button class="btn secondary">Cancel</button>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

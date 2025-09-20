@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Claim Analysis Result – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}" class="active"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Upload / Processed Output</div>
+    <h1>Claim Analysis Result</h1>
+    <div class="grid-2">
+      <section class="card">
+        <div class="small" style="font-weight:700; color:#111; margin-bottom:8px">Extracted Claim Details</div>
+        <div class="grid-2">
+          <div><div class="small">Policy ID</div><div>123456789</div></div>
+          <div><div class="small">Horse Name</div><div>Pegasus</div></div>
+          <div><div class="small">Date of Incident</div><div>01/01/2025</div></div>
+          <div><div class="small">Uploaded File</div><a href="#">pegasus_vetbill.pdf</a></div>
+          <div style="grid-column:1 / -1">
+            <div class="small">Vet Notes</div>
+            <div>Hind left leg moderate laceration; soft tissue surgery performed</div>
+          </div>
+        </div>
+      </section>
+      <aside class="card">
+        <div class="small" style="font-weight:700; color:#111; margin-bottom:8px">Veterinary Bill</div>
+        <div class="grid-2">
+          <div><div class="small">Date of Incident</div><div>01/01/2025</div></div>
+          <div><div class="small">Horse Name</div><div>Pegasus</div></div>
+          <div><div class="small">Date of Operation</div><div>01/01/2025</div></div>
+          <div><div class="small">Surgery Cost</div><div>$1500</div></div>
+          <div style="grid-column:1/-1"><div class="small">Description</div>Hind left leg moderate laceration; soft tissue surgery performed</div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="small" style="font-weight:700; color:#111; margin-bottom:8px">Generated Claim Offer</div>
+      <div class="grid-4">
+        <div><div class="small">Claim ID</div><div>101</div></div>
+        <div><div class="small">Policy ID</div><div>123456789</div></div>
+        <div><div class="small">Claim Amount</div><div>$1500</div></div>
+        <div><div class="small">Deductible</div><div>$250</div></div>
+        <div><div class="small">Status</div><div class="status-dot"><span class="dot"></span>Pending Review</div></div>
+        <div><div class="small">Recommended Payout</div><div>$1250</div></div>
+      </div>
+      <div class="right" style="margin-top:16px">
+        <button class="btn primary">Approve Payout</button>
+        <button class="btn ghost">Manual Review</button>
+        <button class="btn ghost">View JSON</button>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

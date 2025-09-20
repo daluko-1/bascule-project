@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Analytics Dashboard – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}" class="active"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Analytics</div>
+    <h1>Analytics Dashboard</h1>
+    <div class="card" style="margin-bottom:16px">
+      <div class="btnrow"><button class="btn ghost">This Month ▾</button> <button class="btn ghost">Filter</button></div>
+    </div>
+    <div class="grid-4">
+      <div class="kpi"><div class="label">Total Claims</div>100</div>
+      <div class="kpi"><div class="label">Total Payouts</div>$175,000</div>
+      <div class="kpi"><div class="label">Approval Rate</div>75%</div>
+      <div class="kpi"><div class="label">Avg. Claim Amount</div>$2,500</div>
+    </div>
+    <section class="card" style="margin-top:16px">
+      <div class="small">Monthly Trend</div>
+      <div class="dropzone" style="height:180px">Chart placeholder</div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

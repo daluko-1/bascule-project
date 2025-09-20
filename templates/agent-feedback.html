@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Agent Feedback – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}" class="active"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Review / Feedback</div>
+    <h1>Agent Feedback</h1>
+    <section class="card" style="max-width:720px">
+      <div class="field"><label>Claim ID*</label><input type="text" value="101"/></div>
+      <div class="field"><label>Horse Name</label><input type="text" value="Pegasus"/></div>
+      <div class="field"><label>Agent Comments*</label>
+        <textarea>Please recheck details of the claim.</textarea>
+      </div>
+      <div class="field">
+        <label>Supporting Documents</label>
+        <div class="dropzone">Click to browse or<br/>drag and drop your files</div>
+      </div>
+      <div class="btnrow">
+        <button class="btn primary">Submit</button>
+        <button class="btn secondary">Cancel</button>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

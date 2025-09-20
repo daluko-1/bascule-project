@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Upload New Claim – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}" class="active"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Upload</div>
+    <h1>Upload New Claim</h1>
+    <div class="grid-2">
+      <section class="card">
+        <div class="field"><label>Policy ID*</label><input type="text"/></div>
+        <div class="field"><label>Horse Name*</label><input type="text"/></div>
+        <div class="field"><label>Incident Date*</label><input type="date"/></div>
+        <div class="field"><label>Notes</label><textarea></textarea></div>
+        <div class="dropzone">Click to browse or<br/>drag and drop your files</div>
+        <div class="btnrow">
+          <a href="{{ url_for('analysis_result') }}" class="btn primary">Submit</a>
+          <a href="{{ url_for('upload') }}" class="btn secondary">Cancel</a>
+        </div>
+      </section>
+      <aside class="float-card card" style="max-width:340px;">
+        <div class="small" style="font-weight:700; color:#111; margin-bottom:8px">Claim Summary</div>
+        <div class="field"><div class="small">Policy Holder</div><div>John Doe</div></div>
+        <div class="field"><div class="small">Coverage Type</div><div>Equine Health</div></div>
+        <div class="field"><div class="small">Expiration Date</div><div>01/01/2026</div></div>
+        <div class="field"><div class="small">Horse Age</div><div>4 years</div></div>
+        <div class="field"><div class="small">Status</div>
+          <div class="status-dot"><span class="dot" style="background:var(--success)"></span>Active</div>
+        </div>
+        <button class="btn ghost" style="margin-top:6px">View Full Summary</button>
+      </aside>
+    </div>
+  </main>
+</div>
+</body>
+</html>

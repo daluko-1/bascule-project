@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Edit Claim – Bascule Claims Admin</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bascule.css') }}">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Bascule Claims Admin</div>
+    <nav class="nav">
+      <a href="{{ url_for('home') }}"><span>🏠</span>Home</a>
+      <a href="{{ url_for('upload') }}"><span>⤴️</span>Upload</a>
+      <a href="{{ url_for('claims') }}" class="active"><span>📁</span>Claims</a>
+      <a href="{{ url_for('review') }}"><span>✨</span>Review</a>
+      <a href="{{ url_for('analytics') }}"><span>📈</span>Analytics</a>
+      <a href="#"><span>⚙️</span>Settings</a>
+    </nav>
+  </aside>
+  <header class="topbar">
+    <div class="links">
+      <a href="#">Dashboard</a>
+      <a href="{{ url_for('upload') }}">Upload Claims</a>
+      <a href="{{ url_for('analytics') }}">Reports</a>
+    </div>
+    <div>Jessica ▾</div>
+  </header>
+  <main class="content">
+    <div class="breadcrumb">Home / Claims / Edit</div>
+    <h1>Edit Claim</h1>
+    <section class="card" style="max-width:740px">
+      <div class="field"><label>Claim ID*</label><input type="text" value="{{ claim_id if claim_id else '101' }}"/></div>
+      <div class="field"><label>Horse Name</label><input type="text" value="Pegasus"/></div>
+      <div class="field"><label>Incident Date</label><input type="date" value="2025-01-01"/></div>
+
+      <h2 style="font-size:22px; margin-top:10px">Override Claimed Amount</h2>
+      <div class="field"><input type="text" value="$1500"/></div>
+      <div class="small" style="margin:-6px 0 10px 2px">Original Claimed Amount: $1250</div>
+      <div class="field">
+        <label>Reason for Edit*</label>
+        <select>
+          <option>Invoice Error</option>
+          <option>Manual Adjustment</option>
+          <option>Policy Exception</option>
+        </select>
+      </div>
+      <div class="btnrow">
+        <button class="btn primary">Save</button>
+        <button class="btn secondary">Cancel</button>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
